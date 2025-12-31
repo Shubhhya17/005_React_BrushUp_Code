@@ -5,7 +5,8 @@ import Counter from "./components/Counter";
 import UpdateInputParerent from "./components/UpdateInputParerent";
 import SubmitForm from "./components/SubmitForm";
 import DerivedState from "./components/DerivedState";
+import CountNumber from "./components/CountNumber";
 
 
 
-createRoot(document.getElementById("root")).render(<DerivedState />);
+createRoot(document.getElementById("root")).render(<CountNumber />);

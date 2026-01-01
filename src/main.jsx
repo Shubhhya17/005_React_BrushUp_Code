@@ -10,7 +10,8 @@ import UsestateEx from "./components/01_useState"
 import ToggleSwitch from "./components/02_Toggle_Switch";
 import CounterValue from "./components/03_GetServerSideProps";
 import LazyLoading from "./components/04_Lazy_Loading";
+import UserData from "./components/05_Promise_Ex";
 
 
 
-createRoot(document.getElementById("root")).render(<LazyLoading />);
+createRoot(document.getElementById("root")).render(<CounterValue/>);

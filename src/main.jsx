@@ -8,7 +8,9 @@ import DerivedState from "./components/DerivedState";
 import CountNumber from "./components/CountNumber";
 import UsestateEx from "./components/01_useState"
 import ToggleSwitch from "./components/02_Toggle_Switch";
+import CounterValue from "./components/03_GetServerSideProps";
+import LazyLoading from "./components/04_Lazy_Loading";
 
 
 
-createRoot(document.getElementById("root")).render(<ToggleSwitch />);
+createRoot(document.getElementById("root")).render(<LazyLoading />);

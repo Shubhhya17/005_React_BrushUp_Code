@@ -11,7 +11,9 @@ import ToggleSwitch from "./components/02_Toggle_Switch";
 import CounterValue from "./components/03_GetServerSideProps";
 import LazyLoading from "./components/04_Lazy_Loading";
 import UserData from "./components/05_Promise_Ex";
+import Parent from "./components/06_Parent";
+import Child from "./components/Child";
 
 
 
-createRoot(document.getElementById("root")).render(<CounterValue/>);
+createRoot(document.getElementById("root")).render(<Parent/>);

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const CounterValue = () => {
   const [posts, setPosts] = useState(null);
-
+ 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => res.json())

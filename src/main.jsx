@@ -13,7 +13,9 @@ import LazyLoading from "./components/04_Lazy_Loading";
 import UserData from "./components/05_Promise_Ex";
 import Parent from "./components/06_Parent";
 import Child from "./components/Child";
+import ExuseMemo from "./components/07_UseMemo";
+import Practice from "./components/Practice";
 
 
 
-createRoot(document.getElementById("root")).render(<Parent/>);
+createRoot(document.getElementById("root")).render(<Practice/>);

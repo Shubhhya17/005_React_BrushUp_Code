@@ -1,29 +1,29 @@
 import React, { useEffect } from "react";
 
-const UserData = () => {
-  function getUserData() {
-    return new Promise((resolve, reject) => {
-      fetch("https://jsonplaceholder.typicode.com/users/1")
-        .then((response) => {
-          if (!response.ok) {
-            return reject("Failed to fetch User Data");
-          }
-        })
-        .then((data) => resolve(data))
-        .catch((error) => reject(error));
-    });
-  }
-  useEffect(() => {
-    getUserData()
-      .then((user) => console.log("User Data", user))
-      .catch((error) => console.log(error));
-  }, []);
-  return (
-    <>
-     <p>
-    {user.address.city} </p>
-    </>
-  );
-};
+const PromiseEx = () => {
+  const myPromise = () => {
+    return new Promise(() => {
+      setTimeout(() => {
+        const sucess = true;
 
-export default UserData;
+        if (sucess) {
+          console.log("resolve");
+        } else reject(console.log("reject"));
+      }, 1000);
+    });
+  };
+
+  const callPromise = async () => {
+    try {
+      const result = await myPromise();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    callPromise;
+  }, []);
+
+  return <></>;
+};
+export default PromiseEx;

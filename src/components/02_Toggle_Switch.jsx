@@ -7,7 +7,7 @@ const ToggleSwitch = ()=>{
 
     return(    
         <>
-            <button onClick={()=>setIsOn(!isOn)}>{isOn ? 'On': 'Off' } </button>
+           <button onClick={()=> setIsOn(!isOn)}>{isOn ? "ON" : "OFF"}</button>
             <button onClick={()=>setIsOn(!isOn)}>{isOn ? 'Light': " Dark"} </button>
         </>
     )

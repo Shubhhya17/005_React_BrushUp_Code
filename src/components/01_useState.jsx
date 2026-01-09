@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 
-const UsestateEx = () => {
+const Counter2= () => {
   const [count, setCount] = useState(0);
-    return (
-    <>
-    <p>{count}</p>
-    <button onClick={()=> setCount(count+1)}> Increment</button>
-    <button onClick={()=> setCount(count-2)}> Decrement </button>
-    </>
-  )
+  const counterFun = ()=>{
+    setCount(count + 1)
+  }
+return (
+  <>
+  <p>{count}</p>
+    <button onClick={counterFun}>Count</button>
+  </>
+)
 }
 
-export default UsestateEx
+export default Counter2

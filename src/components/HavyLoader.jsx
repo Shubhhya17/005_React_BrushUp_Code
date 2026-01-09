@@ -2,9 +2,8 @@ import React from 'react'
 
 const HavyLoader = () => {
   return (
-    <>
-    <p>Hay this is Heavy Loader</p>
-    </>
+    <div><h3>
+       This is HavyLoader</h3></div>
   )
 }
 

@@ -1,35 +1,28 @@
-import axios from 'axios'
-import React, { useEffect } from 'react'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const Practice = () => {
 
     const [posts, setPosts] = useState([]);
-const APICall = async()=>{
-    try{
-       const res=  await axios.get(
-            "https://jsonplaceholder.typicode.com/posts"
-        )
-        setPosts(res.data)
-    }catch(error){
-        console.log(error)
+
+    const APICall = async () => {
+        const res = await axios.get("https://jsonplaceholder.typicode.com/posts")
+        console.log("API DATA:", res.data); 
+    setPosts(res.data);
     }
+
+    useEffect(()=>{
+APICall()
+    },[])
+
+    return (
+        <>
+        {posts.map((items) => (
+        <div key={items.id}>
+          <p>{items.title}</p>
+        </div>
+      ))}
+        </>
+    )
 }
-
-useEffect(()=>{
-    APICall()
-},[])
-
-  return (
-  <>
- {posts.map((item)=>{
-    <div key={item.id}>
-        <h4>{title.body}</h4>
-        <h5>{title.para}</h5>
-
-    </div>
- })}
-  </>
-  )
-}
-
 export default Practice

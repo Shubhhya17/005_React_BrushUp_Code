@@ -15,6 +15,9 @@ import Parent from "./components/06_Parent";
 import Child from "./components/Child";
 import ExuseMemo from "./components/07_UseMemo";
 import Practice from "./components/Practice";
+import PromiseEx from "./components/05_Promise_Ex";
+import Counter2 from "./components/01_useState";
+import MyLoading from "./components/04_Lazy_Loading";
 
 
 

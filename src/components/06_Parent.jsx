@@ -1,8 +1,12 @@
 import React from 'react'
 
 const Parent2 = () => {
+  console.log(a)
+  var a = 10;
   return (
-    <div>06_Parent</div>
+   <>
+   
+   </>
   )
 }
 

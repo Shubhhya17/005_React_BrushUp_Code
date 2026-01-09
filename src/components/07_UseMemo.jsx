@@ -1,20 +1,19 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo, useState } from "react";
 
-const ExuseMemo = () => {
-  const [ count, setCount] = useState(0);
+const MyMemo = ()=>{
 
-  const double = useMemo(()=>{
-    return count * 2;
-  },[count])
+  const [count, setCount] = useState(0)
 
-    return (
+const double = useMemo(()=>{
+  return count * 2;
+}, [count])
+
+
+  return(
     <>
-    <p>Double: {double}</p>
-    <button onClick={()=>setCount(count + 1)}> +
-         </button>
-    
+    <p> Double {double}</p>
+    <button onClick={()=> setCount(count + 1)}> + </button>
     </>
   )
 }
-
-export default ExuseMemo
+export default MyMemo;

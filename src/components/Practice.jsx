@@ -8,7 +8,7 @@ const Practice = () => {
     const APICall = async () => {
         const res = await axios.get("https://jsonplaceholder.typicode.com/posts")
         console.log("API DATA:", res.data); 
-    setPosts(res.data);
+    setPosts(res?.data);
     }
 
     useEffect(()=>{

@@ -1,13 +1,19 @@
-import React from 'react'
+import axios from "axios";
+import { useEffect } from "react";
 
-const Parent2 = () => {
-  console.log(a)
-  var a = 10;
-  return (
-   <>
-   
-   </>
-  )
-}
+const apiPromise = () => {
+  const getData = async () => {
+    try {
+      const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+      console.log(res?.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
-export default Parent2
+  useEffect(() => {
+    getData();
+  }, []);
+  return <></>;
+};
+export default apiPromise;

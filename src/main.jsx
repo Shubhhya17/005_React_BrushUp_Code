@@ -22,4 +22,4 @@ import MapReduce from "./components/MapReduce";
 
 
 
-createRoot(document.getElementById("root")).render(<MapReduce/>);
+createRoot(document.getElementById("root")).render(<Practice/>);

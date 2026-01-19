@@ -1,28 +1,22 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const Practice = () => {
+  const [value, setValue] = useState(1);
 
-    const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    if (value >= 20) return;
 
-    const APICall = async () => {
-        const res = await axios.get("https://jsonplaceholder.typicode.com/posts")
-        console.log("API DATA:", res.data); 
-    setPosts(res?.data);
-    }
+    const timer = setTimeout(() => {
+      setValue((prev) => prev + 1);
+    }, 1000);
 
-    useEffect(()=>{
-APICall()
-    },[])
+    return () => setTimeout(timer);
+  }, [value]);
 
-    return (
-        <>
-        {posts.map((items) => (
-        <div key={items.id}>
-          <p>{items.title}</p>
-        </div>
-      ))}
-        </>
-    )
-}
-export default Practice
+  return(
+    <>
+    <p>{value}</p>
+    </>
+  )
+};
+export default Practice;

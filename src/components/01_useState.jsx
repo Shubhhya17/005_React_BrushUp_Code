@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-const Counter2= () => {
-  const [count, setCount] = useState(0);
-  const counterFun = ()=>{
-    setCount(count + 1)
-  }
-return (
-  <>
-  <p>{count}</p>
-    <button onClick={counterFun}>Count</button>
-  </>
-)
+const Counter2 = ()=> {
+
+  const [value , setValue] = useState(0);
+
+
+  return(
+    <>
+    <h1>{value}</h1>
+    <button onClick={(setValue(value + 1))}> Click Me</button>
+    </>
+  )
+
 }
-
 export default Counter2

@@ -1,10 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import Counter from "./components/Counter";
-// import SubmitForm from "./components/SubmitForm";
-// import DerivedState from "./components/DerivedState";
-// import CountNumber from "./components/CountNumber";
 import UsestateEx from "./components/01_useState"
 import ToggleSwitch from "./components/02_Toggle_Switch";
 import CounterValue from "./components/03_GetServerSideProps";
@@ -19,6 +15,7 @@ import Counter2 from "./components/01_useState";
 import MyLoading from "./components/04_Lazy_Loading";
 import MyMemo from "./components/07_UseMemo";
 import MapReduce from "./components/MapReduce";
+import ApiPromise2 from "./components/06_Parent";
 
 
 
